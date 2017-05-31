@@ -1,0 +1,91 @@
+/* FONTS */
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* RESET */
+
+body {font: 13px/19px 'montserratlight', Arial, sans-serif; }
+
+body, html {margin: 0; padding: 0; height: 100%; overflow-x: hidden; background: #fb9a18;}
+h1, h2, h3, h4, h4, h6, p {margin: 0; padding: 0;}
+.pagewrapper {width: 95%; margin: 0 auto; position: relative;}
+input {appearance: none; -webkit-appearance: none; -moz-appearance: none; -o-appearance: none;}
+header {width: 100%; height: 90px; float: left; position: relative; box-sizing: border-box;}
+section {width: 100%; float: left; position: relative; } 
+header aside {width: 250px; float: left; position: absolute; top: 0;left: 0; z-index: 100;}
+nav {width: 100%; float: left; position: relative; padding-left: 250px; box-sizing: border-box;}
+  nav ul {list-style: none; text-transform: uppercase;}
+  nav li {display: inline-block; margin: 25px 20px 0;}
+  nav li a {color: black; text-decoration: none; padding: 3px 0 1px; font: 12.5px/18px 'montserratlight', Arial, sans-serif}
+  nav li a:hover {border-top: solid 4px #ff0000; border-bottom: solid 4px #ff0000; }
+.featured {background: black}
+.featured h3 {font: 33px/40px 'montserratlight', Arial, sans-serif; margin: 0; color: white;}
+.featured p {font: 13px/19px 'montserratlight', Arial, sans-serif;}
+.featured .carousel, .featured .carousel-cell {width: 100%;}
+.featured .carousel-cell img {width: 100%; height: 100%; object-fit: cover}
+.slidercontent {width: 50%; max-width: 700px; float: left; position: absolute; right: 0; bottom: 0; padding: 30px 100px 60px 0; color: white; }
+
+.about {background: black; padding: 100px 0; box-sizing: border-box; text-align: center; color: white; margin-top: -10px}	
+	.about ul {list-style: none; margin: 0 auto; padding: 0; width: 90%;}
+	.about li {width: 33%; display: inline-block; vertical-align: top; padding: 0 100px; box-sizing: border-box;}
+	.about h4 {font: 20px/26px 'montserratlight', Arial, sans-serif; color: #fb9a18; margin: 5px 0 10px; text-transform: uppercase;}
+	.about p {font: 13px/19px 'montserratlight', Arial, sans-serif; color: white;}
+	.about li a {text-decoration: none;}
+	.about li a:hover img {opacity: 0.8}
+	.about li a:hover h4 {text-decoration: underline;}
+
+.newsletter {padding: 40px 0; text-align: center; box-sizing: border-box; color: white;}
+	.newsletter h3 {font: 14px/20px 'montserratlight', Arial, sans-serif; margin-bottom: 15px; text-transform: uppercase;}
+	.newsletter p {font: 13px/19px 'montserratlight', Arial, sans-serif; margin-bottom: 10px;}
+	.newsletter aside {width: 235px; margin: 0 auto}
+	.newsletter input[type="email"] {width: 203px; height: 28px; padding: 3px 5px; box-sizing: border-box; outline: 0; border: 0; font: 13px/19px 'montserratlight', Arial, sans-serif; color: black;}
+	.newsletter input[type="submit"] {width: 32px; height: 28px; background: black url(../images/email.jpg) no-repeat center center; border: 0; outline: 0; float: right;}
+	.newsletter input[type="submit"]:hover {opacity: 0.8; cursor: pointer;}
+
+.brands-home {background: black; color: white; text-align: center;}
+	.brands-home aside {position: absolute; top: 0; left: 0; width: 42%; float: left; height: 562px}
+	.brands-home article {width: 35%; padding: 138px 0 27px 0; margin-right: 10%; position: relative; box-sizing: border-box; float: right; min-height: 562px; }
+	.brands-home aside img {max-width: 100%; height: 100%; object-fit: cover}
+	.brands-home article .carousel-cell {height: 336px; width: 100%; position: relative;}
+	.brands-home article .carousel-cell h6 {font: 13px/19px 'montserratlight', Arial, sans-serif; text-transform: uppercase; position: absolute; bottom: 0; width: 100%; text-align: center; float: left;}
+	.brands-home article img {margin-bottom: 35px; max-width: 100%; height: auto;}
+	.brands-home a {color: white; text-decoration: none;}
+	.brands-home a:hover {color: #fb9a18;}
+	.brands-home .flickity-prev-next-button {top: 115%!important;}
+	.flickity-prev-next-button.next {right: 44%!important}
+	.flickity-prev-next-button.previous {left: 44%!important;}
+
+footer {width: 100%; font: 13px/19px 'montserratlight', Arial, sans-serif; float: left; position: relative; padding: 65px 0; box-sizing: border-box;}
+	.pagewrapper-footer {width: 90%; max-width: 1044px; margin: 0 auto; color: black;}
+	.footer-logo, .quick-links, .subscribe {width: 33%; box-sizing: border-box; display: inline-block; position: relative;}
+	.footer-logo, .quick-links {padding-right: 75px;}
+	footer h4 {font: 13px/19px 'montserratlight', Arial, sans-serif; margin-bottom: 10px;}
+	.footer-logo p {font: 11px/17px 'montserratlight', Arial, sans-serif; margin-top: 10px;}
+	.footer-logo img {max-width: 100%; height: auto;}
+	.quick-links, .subscribe {padding-top: 90px; vertical-align: top; text-transform: uppercase;}
+		.quick-links ul {list-style: none; width: 49%; margin: 0; padding-left: 0; padding-right: 20px; box-sizing: border-box; display: inline-block; vertical-align: top;}
+		footer a {text-decoration: none; color: black;}
+		footer a:hover {text-decoration: underline;}
+		.quick-links li {margin-bottom: 8px; }
+		footer input[type="email"] {width: 100%; height: 28px; padding: 3px 37px 3px 5px; box-sizing: border-box; outline: 0; border: 0; font: 13px/19px 'montserratlight', Arial, sans-serif; color: black;}
+		footer input[type="submit"] {width: 32px; height: 28px; background: black url(../images/email.jpg) no-repeat center center; border: 0; outline: 0; float: right; position: absolute; right: 0; top: 0;}
+		footer input[type="submit"]:hover {opacity: 0.8; cursor: pointer;}
+		footer aside {position: relative;}

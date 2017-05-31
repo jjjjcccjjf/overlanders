@@ -1,54 +1,81 @@
 <?php
-/**
- * The front page template file
- *
- * If the user has selected a static page for their homepage, this is what will
- * appear.
- * Learn more: https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+/* Template Name: Home */
+get_header();
+while(have_posts()): the_post();
+?>
 
-get_header(); ?>
+<section class="featured">
+	<div class="carousel" data-flickity='{ "wrap": true, "prevNextButtons": false, "pageDots": true }'>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+		<?php if( have_rows('slider') ): while ( have_rows('slider') ) : the_row(); ?>
+			<div class="carousel-cell">
 
-		<?php // Show the selected frontpage content.
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/page/content', 'front-page' );
-			endwhile;
-		else : // I'm not sure it's possible to have no posts when this page is shown, but WTH.
-			get_template_part( 'template-parts/post/content', 'none' );
-		endif; ?>
+				<div class="sliderimg">
+					<img src="<?php echo get_sub_field('image'); ?>">
+				</div>
+				<div class="slidercontent">
+					<h3><?php echo get_sub_field('heading'); ?></h3>
+					<p><?php echo get_sub_field('body'); ?></p>
+				</div>
+			</div>
 
-		<?php
-		// Get each of our panels and show the post data.
-		if ( 0 !== twentyseventeen_panel_count() || is_customize_preview() ) : // If we have pages to show.
+		<?php endwhile; else : endif; ?>
 
-			/**
-			 * Filter number of front page sections in Twenty Seventeen.
-			 *
-			 * @since Twenty Seventeen 1.0
-			 *
-			 * @param $num_sections integer
-			 */
-			$num_sections = apply_filters( 'twentyseventeen_front_page_sections', 4 );
-			global $twentyseventeencounter;
+		</div>
+	</section>
 
-			// Create a setting and control for each of the sections available in the theme.
-			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$twentyseventeencounter = $i;
-				twentyseventeen_front_page_section( null, $i );
-			}
+	<section class="about">
+		<div class="pagewrapper">
+			<ul>
+				<?php if( have_rows('blurbs') ): while ( have_rows('blurbs') ) : the_row(); ?>
+					<li>
+						<a href="<?php echo get_sub_field('page_link'); ?>">
+							<img src="<?php echo get_sub_field('image'); ?>">
+							<h4><?php echo get_sub_field('heading'); ?></h4>
+							<p><?php echo get_sub_field('body'); ?></p>
+						</a>
+					</li>
+				<?php endwhile; else : endif; ?>
+				</ul>
+			</div>
+		</section>
 
-	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here. ?>
+		<section class="newsletter">
+			<div class="pagewrapper">
+				<h3>Subscribe to our Newsletter</h3>
+				<p>Receive updates about recent events, products, and more!</p>
+				<aside>
+					<input type="email" name="" placeholder="EMAIL">
+					<input type="submit" name="" value=" ">
+				</aside>
+			</div>
+		</section>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+		<section class="brands-home">
+			<div class="pagewrapper">
+				<aside>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandsimg.jpg">
+				</aside>
+				<article>
+					<div class="carousel" data-flickity='{ "contain": true, "pageDots": false }'>
 
-<?php get_footer();
+						<?php
+						$args = array('post_type' => 'brand', 'posts_per_page' => -1);
+						$the_query = new WP_Query($args);
+						if ( $the_query->have_posts() ) {  while ( $the_query->have_posts() ): $the_query->the_post(); ?>
+							<div class="carousel-cell">
+								<a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url(); ?>"></a>
+								<p><?php the_excerpt() ?></p>
+									<h6><a href="<?php the_permalink() ?>">View More</a></h6>
+								</div>
+							<?php endwhile; wp_reset_postdata(); } else { /** no posts found **/ } ?>
+
+
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<?php
+		endwhile;
+		get_footer();

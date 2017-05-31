@@ -1,0 +1,120 @@
+@media screen and (max-width: 1600px) and (min-width: 1441px) {
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about li {padding: 0 50px;}
+	.flickity-prev-next-button.next {right: 43%!important}
+	.flickity-prev-next-button.previous {left: 43%!important;}
+	.footer-logo, .quick-links {padding-right: 50px;}
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1280px) {
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about li {padding: 0 30px;}
+	.flickity-prev-next-button.next {right: 43%!important}
+	.flickity-prev-next-button.previous {left: 43%!important;}
+	.footer-logo, .quick-links {padding-right: 50px;}
+	.featured h3 {font: 30px/36px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding-right: 50px; padding-bottom: 45px;}
+	.flickity-page-dots {bottom: 20px!important;}
+}
+
+@media screen and (max-width: 1279px) and (min-width: 1025px) {
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about {border-top: solid 1px #272727;}
+	.about li {padding: 0 30px;}
+	.flickity-prev-next-button.next {right: 40%!important}
+	.flickity-prev-next-button.previous {left: 40%!important;}
+	.footer-logo, .quick-links {padding-right: 50px;}
+	.featured h3 {font: 30px/36px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding: 20px 50px 80px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+	.flickity-page-dots {bottom: 30px!important;}
+}
+/************************************************************************************
+smaller than 1025
+*************************************************************************************/
+@media screen and (max-width: 1024px) and (min-width: 800px) {
+	nav {padding-left: 180px;}
+	nav li {margin: 25px 15px 0;}
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about {border-top: solid 1px #272727;}
+	.about li {padding: 0 20px;}
+	.about ul {width: 100%}
+	.flickity-prev-next-button.next {right: 38%!important}
+	.flickity-prev-next-button.previous {left: 38%!important;}
+	.footer-logo, .quick-links {padding-right: 50px;}
+	.featured h3 {font: 30px/36px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding: 20px 50px 80px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+	.flickity-page-dots {bottom: 30px!important;}
+	.brands-home article {padding-top: 100px;}
+	.brands-home article .carousel-cell {height: 374px;}
+}
+
+@media screen and (max-width: 799px) and (min-width: 641px) {
+	nav {padding-left: 180px;}
+	nav ul {margin: 0; padding: 0; padding-left: 20px; padding-top: 5px;}
+	nav li {margin: 15px 0 0!important; width: 32%; padding: 0 0px; box-sizing: border-box; }
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about {border-top: solid 1px #272727;}
+	.about li {padding: 0 50px; width: 100%; margin-bottom: 30px;}
+	.about ul {width: 100%}
+	.flickity-prev-next-button.next {right: 35%!important}
+	.flickity-prev-next-button.previous {left: 35%!important;}
+	.footer-logo {padding-right: 50px;}
+	.featured h3 {font: 24px/30px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding: 20px 50px 80px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+	.flickity-page-dots {bottom: 30px!important;}
+	.brands-home article {padding-top: 100px;}
+	.brands-home article .carousel-cell {height: 374px;}
+	.footer-logo, .quick-links {width: 49%!important;}
+	.quick-links {padding-left: 50px; padding-right: 0!important}
+	.subscribe {width: 100%; padding: 40px 50px; box-sizing: border-box;}
+}
+
+/************************************************************************************
+smaller than 641
+*************************************************************************************/
+@media screen and (max-width: 640px) and (min-width: 481px) {
+	nav {padding-left: 180px;}
+	nav ul {margin: 0; padding: 0; padding-left: 20px; padding-top: 5px;}
+	nav li {margin: 15px 0 0!important; width: 32%; padding: 0 0px; box-sizing: border-box; }
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about {border-top: solid 1px #272727; padding: 40px 0;}
+	.about li {padding: 0 50px; width: 100%; margin-bottom: 30px;}
+	.about ul {width: 100%}
+	.flickity-prev-next-button.next {right: 35%!important}
+	.flickity-prev-next-button.previous {left: 35%!important;}
+	.footer-logo {padding-right: 25px;}
+	.featured h3 {font: 20px/26px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding: 20px 30px 80px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+	.flickity-page-dots {bottom: 30px!important;}
+	.brands-home article {padding-top: 50px; width: 45%; margin-right: 5%}
+	.brands-home article .carousel-cell {height: 424px;}
+	.footer-logo, .quick-links {width: 49%!important;}
+	.quick-links {padding-left: 25px; padding-right: 0!important}
+	.subscribe {width: 100%; padding: 40px 50px; box-sizing: border-box;}
+}
+/************************************************************************************
+smaller than 376
+*************************************************************************************/
+@media screen and (max-width: 480px) and (min-width: 320px) {
+	header {height: auto;}
+	header aside {width: 100%; text-align: center; position: relative;}
+	nav {padding-left: 0px; margin-top: -15px; margin-bottom: 10px;}
+	nav ul {margin: 0; padding: 0; padding-left: 20px; padding-top: 5px;}
+	nav li {margin: 15px 0 0!important; width: 32%; padding: 0 0px; box-sizing: border-box; }
+	.flickity-page-dots .dot {width: 20px!important; height: 20px!important;}
+	.about {border-top: solid 1px #272727; padding: 40px 0;}
+	.about li {padding: 0 30px; width: 100%; margin-bottom: 30px;}
+	.about ul {width: 100%}
+	.flickity-prev-next-button.next {right: 35%!important}
+	.flickity-prev-next-button.previous {left: 35%!important;}
+	
+	.featured h3 {font: 20px/26px 'montserratlight', Arial, sans-serif;}
+	.slidercontent { padding: 20px 30px 80px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+	.flickity-page-dots {bottom: 30px!important;}
+	.brands-home aside {display: none;}
+	.brands-home article {width: 100%; margin-right: 0; padding: 50px 30px 0;}
+	.brands-home article .carousel-cell {height: 424px;}
+	.footer-logo, .quick-links {width: 100%!important; padding: 0 25px 30px; }
+	.subscribe {width: 100%; padding: 0 25px; box-sizing: border-box;}
+}
+
