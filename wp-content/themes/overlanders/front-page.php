@@ -64,7 +64,7 @@ while(have_posts()): the_post();
 						$the_query = new WP_Query($args);
 						if ( $the_query->have_posts() ) {  while ( $the_query->have_posts() ): $the_query->the_post(); ?>
 							<div class="carousel-cell">
-								<a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url(); ?>"></a>
+								<a href="<?php the_permalink() ?>"><img src="<?php echo get_field('brand_image'); ?>"></a>
 								<p><?php the_excerpt() ?></p>
 									<h6><a href="<?php the_permalink() ?>">View More</a></h6>
 								</div>
